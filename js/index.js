@@ -14,7 +14,7 @@ function login(e) {
     let passwordVal = password.value;
 
     if(usuarioVal == '' || passwordVal == ''){
-        alert('completa todos los campos');
+        return;
     }
     console.log('El valor para user es ' + usuarioVal);
     console.log('El valor para pass es ' + passwordVal);
