@@ -2,7 +2,7 @@ body {
     background: linear-gradient(to right, #185a9d, #43cea2);
 }
 
-#login {
+#login, #registro {
     width: 50%;
     border: 1px solid black;
     border-radius: 10px;
@@ -10,4 +10,9 @@ body {
     padding: 30px;
     background: #fff;
 
+}
+
+#link {
+    text-align: right;
+    
 }
