@@ -19,11 +19,24 @@ function registro (e) {
     let passVal = pass.value;
 
     if(nombreVal == '' || userVal == '' || direccionVal == '' || passVal == '') {
-        return;
+        alert('completa todos los campos');
 
     }
-console.log('el valor para nombre es: ' + nombreVal);
-console.log('el valor para direccion es: ' + direccionVal);
-console.log('el valor para user es: ' + userVal);
-console.log('el valor para contraseña es: ' + passVal);
+
+    const usuario = {
+        nombre: nombreVal,
+        correo : direccionVal,
+        user: userVal,
+        pass: passVal,
+
+
+    }
+    localStorage.setItem('usuario', JSON.stringify(usuario));
+
+    nombre.value = '';
+    direccion.value = '';
+    user.value = '';
+    pass.value = '';
+
+    console.log('usuario guardado')
 }
