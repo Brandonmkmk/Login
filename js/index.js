@@ -21,12 +21,16 @@ function login(e) {
         let objeto = JSON.parse(localStorage.getItem('usuario'));
 
         if(usuarioVal == objeto.user && passwordVal == objeto.pass) {
-            creaMensaje('login exitoso', 'success')
+            creaMensaje('login exitoso', 'success');
+            localStorage.setItem('sesion', 'activa');
+            setTimeout(function() {
+                window.open('./inicio.html', '_self');
+            },1000);
         }else{
             creaMensaje('usuario o contraseña fallida', 'danger');
           }
         }else{
-            creaMensaje('no hay registros', 'danger')
+            creaMensaje('no hay registros', 'danger');
         }
     }
 
